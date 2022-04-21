@@ -3,9 +3,11 @@ package com.lkh.service.solo.impl;
 import com.lkh.entity.bo.HeadLine;
 import com.lkh.entity.dto.Result;
 import com.lkh.service.solo.HeadLineService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
+@Service
 public class HeadLineServiceImpl implements HeadLineService {
     @Override
     public Result<Boolean> addHeadLine(HeadLine headLine) {

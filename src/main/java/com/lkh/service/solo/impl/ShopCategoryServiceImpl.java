@@ -3,9 +3,11 @@ package com.lkh.service.solo.impl;
 import com.lkh.entity.bo.ShopCategory;
 import com.lkh.entity.dto.Result;
 import com.lkh.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
+@Service
 public class ShopCategoryServiceImpl implements ShopCategoryService {
     @Override
     public Result<Boolean> addShopCategory(ShopCategory shopCategory) {

@@ -7,9 +7,11 @@ import com.lkh.entity.dto.Result;
 import com.lkh.service.combine.HeadLineShopCategoryCombineService;
 import com.lkh.service.solo.HeadLineService;
 import com.lkh.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
+@Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
 
     private HeadLineService headLineService;

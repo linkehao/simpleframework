@@ -7,16 +7,19 @@ import com.lkh.entity.dto.Result;
 import com.lkh.service.combine.HeadLineShopCategoryCombineService;
 import com.lkh.service.solo.HeadLineService;
 import com.lkh.service.solo.ShopCategoryService;
+import com.lkh.service.solo.impl.HeadLineServiceImpl;
+import com.lkh.service.solo.impl.ShopCategoryServiceImpl;
 import org.simpleframework.core.annotation.Service;
+import org.simpleframework.inject.annotation.Autowired;
 
 import java.util.List;
 
 @Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
-
-    private HeadLineService headLineService;
-
-    private ShopCategoryService shopCategoryService;
+    @Autowired
+    private HeadLineService headLineService = new HeadLineServiceImpl();
+    @Autowired
+    private ShopCategoryService shopCategoryService = new ShopCategoryServiceImpl();
 
     @Override
     public Result<MainPageInfoDTO> getMainPageInfo() {
